@@ -10,7 +10,8 @@ int y;
 
 for (y = 97; y <= 122; y++)
 {
-if (y == 101 || y == 113) continue;
+if (y == 101 || y == 113)
+continue;
 else
 {
 putchar(y);
