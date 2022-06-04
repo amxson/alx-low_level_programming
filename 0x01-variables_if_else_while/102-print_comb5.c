@@ -1,35 +1,31 @@
 #include <stdio.h>
-
 /**
- * main - main - two pairs of numbers that do not repeat
- *
- * Return (0)
- */
-
+*main - Prints all combinations of two two digits with,
+* and space followed by new line
+*
+*Return: returns 0
+*/
 int main(void)
 {
-	int i, j;
+	int x, y;
 
-	for (j = 0; j <= 99; j++)
+	for (x = 0; x <= 98; x++)
 	{
-		for (i = j; i <= 99; i++)
+		for (y = x + 1; y <= 99; y++)
 		{
-			if (i != j)
+			putchar((x / 10) + '0');
+			putchar((x % 10) + '0');
+			putchar(32);
+			putchar((y / 10) + '0');
+			putchar((y % 10) + '0');
+
+			if (x / 10 != 9 || x % 10 != 8)
 			{
-				putchar(j / 10 + 48);
-				putchar(j % 10 + 48);
-				putchar(' ');
-				putchar(i / 10 + 48);
-				putchar(i % 10 + 48);
-			}
-			if (j * 100 + i != 9899)
-			{
-				putchar(',');
-				putchar(' ');
+				putchar(44);
+				putchar(32);
 			}
 		}
 	}
-	putchar('\n');
-
+	putchar(10);
 	return (0);
 }
